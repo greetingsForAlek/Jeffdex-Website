@@ -21,7 +21,7 @@ async function populateGrid() {
             `
 
             card.addEventListener("click", () => {
-                console.log("Navigation not implemented yet");
+                window.location.href = `pages/character.html?id=${character.id}`
             })
 
             characterGrid.appendChild(card);

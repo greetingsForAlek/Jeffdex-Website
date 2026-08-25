@@ -28,6 +28,13 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
+.image-div {
+    background: rgba(0, 0, 0, 0.546);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
 .character-card {
     background: rgba(0, 0, 0, 0.546);
     border-radius: 12px;
@@ -52,6 +59,18 @@ body {
 .character-card h2 {
     margin: 12px;
     font-size: 1.2rem;
+}
+
+#character-name {
+    color: white;
+}
+
+#character-desc {
+    color: white;
+}
+
+#character-canonicity {
+    color: white;
 }
 
 #character-grid {
