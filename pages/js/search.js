@@ -2,15 +2,30 @@ const searchBar = document.getElementById("search-bar");
 const searchBtn = document.getElementById("search-button");
 const characterGrid = document.getElementById("search-grid");
 
-async function loadCharacters(name = "") {
+const alignmentFilter = document.getElementById("alignment-filter");
+const canonFilter = document.getElementById("canon-filter");
+
+async function loadCharacters(name = "", alignment = "", canon = "") {
     try {
         characterGrid.innerHTML = "";
 
-        let url = "https://jeff-api.onrender.com/characters";
+        const params = new URLSearchParams();
 
         if (name !== "") {
-            url += `?name=${encodeURIComponent(name)}`;
+            params.append("name", name)
         }
+
+        if (alignment !== "") {
+            params.append("alignment", alignment);
+        }
+
+        if (canon !== "") {
+            params.append("canon", canon)
+        }
+
+        let url = `https://jeff-api.onrender.com/characters?${params.toString()}`;
+
+        console.log(url)
 
         const res = await fetch(url);
 
@@ -42,7 +57,9 @@ async function loadCharacters(name = "") {
 }
 
 searchBtn.addEventListener("click", () => {
-    const searchTerm = searchBar.value.trim();
+    const name = searchBar.value.trim();
+    const alignment = alignmentFilter.value;
+    const canon = canonFilter.value;
 
-    loadCharacters(searchTerm);
-})
+    loadCharacters(name, alignment, canon);
+});
