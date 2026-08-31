@@ -6,6 +6,7 @@ async function populatePage() {
     const characterDesc = document.getElementById("character-desc");
     const characterImage = document.getElementById("character-img");
     const characterCanonicity = document.getElementById("character-canonicity");
+    const characterAlignment = document.getElementById("character-alignment");
 
     const res = await fetch(`https://jeff-api.onrender.com/characters/${characterId}`);
     const character = await res.json();
@@ -14,6 +15,7 @@ async function populatePage() {
     characterDesc.innerHTML = character.description;
     characterImage.src = character.image;
     characterCanonicity.innerHTML = `Canon: ${character.canon ? "yes" : "no"}`;
+    characterAlignment.innerHTML = "Alignment: " + character.alignment;
 }
 
 populatePage();

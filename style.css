@@ -153,6 +153,17 @@ body {
     color: white;
 }
 
+#character-alignment {
+    color: white;
+}
+
+#alignment-filter, #canon-filter {
+    background-color: rgba(0, 0, 0, 0.546);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
 #character-grid {
     display: grid;
     grid-template-columns: repeat(3, 310px);
@@ -170,10 +181,18 @@ body {
         height: 200px;
         width: 100%;
     }
+
+    #search-grid {
+        grid-template-columns: repeat(2, 230px);
+    }
 }
 
 @media (max-width: 700px) {
     #character-grid {
+        grid-template-columns: 310px;
+    }
+
+    #search-grid {
         grid-template-columns: 310px;
     }
 }
