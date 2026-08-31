@@ -72,12 +72,18 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
+.right-div p {
+    width: 100%;
+    word-break: break-all;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 10px 10px 10px 10px;
     gap: 10px;
+    width: 100%;
 }
 
 .search-nav-button {
@@ -89,6 +95,41 @@ body {
     margin-bottom: 25px;
     color: white;
     font-size: 2rem;
+}
+
+.search-container {
+    background: rgba(0, 0, 0, 0.546);
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+#search-bar {
+    background-color: rgba(0, 0, 0, 0.546);
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+}
+
+#search-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    background: rgba(0, 0, 0, 0.546);
+    gap: 25px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
 #character-name {
