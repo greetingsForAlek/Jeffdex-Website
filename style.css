@@ -111,6 +111,15 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
+.search-container button {
+    background-color: rgb(19, 102, 255);
+    color: white;
+    border: none;
+    height: 28px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 #search-bar {
     background-color: rgba(0, 0, 0, 0.546);
     border: 2px solid white;
