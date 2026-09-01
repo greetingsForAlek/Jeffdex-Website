@@ -74,7 +74,7 @@ body {
 
 .right-div p {
     width: 100%;
-    word-break: break-all;
+    word-break: keep-all;
 }
 
 .main-container {
@@ -185,6 +185,10 @@ body {
     #search-grid {
         grid-template-columns: repeat(2, 230px);
     }
+
+    #main-container {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 700px) {
@@ -194,5 +198,9 @@ body {
 
     #search-grid {
         grid-template-columns: 310px;
+    }
+
+    #main-container {
+        flex-direction: column;
     }
 }
