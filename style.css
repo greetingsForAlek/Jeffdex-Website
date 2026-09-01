@@ -74,7 +74,8 @@ body {
 
 .right-div p {
     width: 100%;
-    word-break: keep-all;
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 .main-container {
